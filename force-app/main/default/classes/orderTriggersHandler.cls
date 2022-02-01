@@ -35,9 +35,6 @@ public class orderTriggersHandler {
             a.AccountTurnOver__C = AccountTo;
         }
         update accountUpdateList;
-
-
     
     }
-
 }
