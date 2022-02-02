@@ -35,6 +35,5 @@ public class accountTurnOverBatch implements Database.Batchable<sObject>  {
             TotalJobItems, CreatedBy.Email
             FROM AsyncApexJob
             WHERE Id = :bc.getJobId()];
-    
     }
 }

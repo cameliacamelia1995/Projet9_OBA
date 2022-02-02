@@ -32,7 +32,7 @@ public class orderTriggersHandler {
                 AccountTo += o.NetAmount__c; 
             }
             //ajout de la valeur de netAmmout dans la variable AccountTo et assignation de cette valeur au champs du compte AccountTurnOver
-            a.AccountTurnOver__C = AccountTo;
+            a.AccountTurnOver__c = AccountTo;
         }
         update accountUpdateList;
     
