@@ -1,5 +1,5 @@
-public class accountTurnOverBatch implements Database.Batchable<sObject>  {
-   // collect the batches of records or objects to be passed to execute
+public class AccountTurnOverBatch implements Database.Batchable<sObject> {
+    // collect the batches of records or objects to be passed to execute
     public Integer recordsProcessed = 0;
     public Database.QueryLocator start(Database.BatchableContext bc) {
         return Database.getQueryLocator(

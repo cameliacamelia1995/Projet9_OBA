@@ -1,5 +1,5 @@
 @IsTest
-public with sharing class accountTurnOverBatch_Tests {
+public with sharing class AccountTurnOverBatch_Test {
     @IsTest
     public static void recordsAccountPassed() {
         TestDataFactory.createdProduct(10, 100, 1000, 100, 1);
@@ -12,11 +12,11 @@ public with sharing class accountTurnOverBatch_Tests {
         for(Order p : orderUpdate) {
             p.Status = 'Activated';
         }
-        update orderUpdate;
+    update orderUpdate;
     accountTurnOverBatch atob = new accountTurnOverBatch();
     Id batchId = Database.executeBatch(atob);
     Test.stopTest();
-s
+
     accountUpdate = [SELECT Id, AccountTurnOver__c FROM Account];
     resultExpeted = [SELECT SUM(AccountTurnOver__c) AccountToExpected FROM Account];
     Decimal expectedAccTo = (Decimal)resultExpeted[0].get('AccountToExpected');
@@ -24,6 +24,6 @@ s
         System.assertEquals(10, accountUpdate.size());
     }
     System.assertEquals(accountTurnOver, expectedAccTo);
-   
+    
     }
 }

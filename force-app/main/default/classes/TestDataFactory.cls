@@ -38,9 +38,7 @@ public class TestDataFactory {
         for (Integer s = 0; s < createdOrder.size(); s++) {
             Order orderTest = createdOrder[s];
             for(Integer c = 0; c < itemQuantity; c++) {
-                //OrderItem testOrderItem = new OrderItem(OrderID = orderTest.Id, Product2Id = productForTest.Id, PriceBookEntryId = testPriceBookEntry.UnitPrice, Quantity = 1);
-                //createdOrderItems.add(testOrderItem);
-                createdOrderItems.add(new OrderItem(OrderID = orderTest.id, Product2Id = productForTest.id, PriceBookEntryId = testPriceBookEntry.id, UnitPrice = testPriceBookEntry.UnitPrice, Quantity = 1));
+            createdOrderItems.add(new OrderItem(OrderID = orderTest.id, Product2Id = productForTest.id, PriceBookEntryId = testPriceBookEntry.id, UnitPrice = testPriceBookEntry.UnitPrice, Quantity = 1));
             }   
         }
         insert createdOrderItems; 

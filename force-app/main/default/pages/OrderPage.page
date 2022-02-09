@@ -1,4 +1,4 @@
-<apex:page controller="orderPageController" >
+<apex:page controller="OrderPageController" >
     <div>
         <h1>
             Sum of my team orders: <apex:outputText value="{!totalSumOrder}" />
