@@ -1,6 +1,7 @@
 // Cette classe contient les triggers qui sont déclenché lors d'un événement dans l'objet order
+// Cette classe contient les triggers qui sont déclenché lors d'un événement dans l'objet order
 trigger OrderTrigger on Order (before update, after update) {
-    orderTriggersHandler calculateOrder = new orderTriggersHandler();
+    OrderTriggerHandler calculateOrder = new OrderTriggerHandler();
     
         if (Trigger.isBefore) {
             calculateOrder.calculateOrderNetAmount(Trigger.new);
