@@ -45,4 +45,10 @@ public class TestDataFactory {
         update createdOrder;
         update createdAccount;
     }
-}
+    //Méthode qui permet de crée un utilisateur en cas de besoin 
+    public static User createUser() {
+        Profile IdProfile = [SELECT Id FROM Profile WHERE Name = 'Standard User' LIMIT 1];
+        User testUser = new User(FirstName='Sam',LastName = 'Dupont',Alias = 'sdupont',Email = 'sam.dupont@example.com',Username = 'sdupont@example.com',ProfileId = IdProfile.id,EmailEncodingKey = 'UTF-8',TimeZoneSidKey = 'GMT',LanguageLocaleKey = 'en_US',LocaleSidKey = 'en_US');
+        insert testUser;
+        return testUser;
+        }}

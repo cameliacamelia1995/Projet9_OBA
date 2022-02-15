@@ -3,7 +3,6 @@ public with sharing class AccountTurnOverBatch_Test {
     @IsTest
     public static void recordsAccountPassed() {
         TestDataFactory.createdProduct(10, 100, 1000, 100, 1);
-        //10*100*1000-201-100;
         Decimal accountTurnOver = 900000;
         List<Account> accountUpdate;
         List<AggregateResult> resultExpeted;
